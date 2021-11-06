@@ -1,11 +1,11 @@
 #!/bin/bash
 
 STACK_NAME=awsbootstrap
-REGION=us-east-1
+REGION=us-west-1
 CLI_PROFILE=awsbootstrap
 
 EC2_INSTANCE_TYPE=t2.micro
-DOMAIN=the-good-parts.com
+DOMAIN=snamapps.com
 CERT=`aws acm list-certificates --region $REGION --profile awsbootstrap --output text \
         --query "CertificateSummaryList[?DomainName=='$DOMAIN'].CertificateArn | [0]"`
 AWS_ACCOUNT_ID=`aws sts get-caller-identity --profile awsbootstrap \
