@@ -19,14 +19,14 @@ if (fs.existsSync(httpsKey) && fs.existsSync(httpsCert)) {
         res.setHeader('Content-Type', 'text/plain');
         res.end(message);
     });
-    app.listen(httpsPort, hostname, () => {
-        console.log(`Server running at http://${hostname()}:${httpsPort}/`);
-    });
+    // app.listen(httpsPort, hostname, () => {
+    //     console.log(`Server running at http://${hostname()}:${httpsPort}/`);
+    // });
 
-    app.get("/", (req, res) => {
-        res.statusCode = 200;
-        res.send("<h1>Hello World!</h1>");
-    });
+    // app.get("/", (req, res) => {
+    //     res.statusCode = 200;
+    //     res.send("<h1>Hello World!</h1>");
+    // });
 
 
 } else {
